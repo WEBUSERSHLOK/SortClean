@@ -1,0 +1,21 @@
+.ptext {
+  font-size: 18px;
+    text-align: center;
+    color: black;
+}
+.h1text {
+  text-align: center;
+  font-size: 32px;
+  margin: 20px auto;
+  max-width: 800px;
+}
+.h2text {
+  text-align: center;
+  font-size: 24px;
+
+  margin: 20px auto;
+  max-width: 800px;
+}
+.overview-card{
+    background: linear-gradient(135deg, #1dd1ad, #10ac84);
+}

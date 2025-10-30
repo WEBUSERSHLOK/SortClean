@@ -1,0 +1,339 @@
+
+.home-container {
+    padding: 16px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.welcome-section {
+    text-align: center;
+    margin-bottom: 24px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.welcome-section h2 {
+    color: #000000;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+}
+
+.welcome-section p {
+    color: #666666;
+    font-size: 16px;
+    margin: 0;
+}
+
+.stats-grid {
+    display: flex !important;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 24px;
+    padding: 0 16px;
+}
+
+@media (min-width: 768px) {
+    .stats-grid {
+        display: flex;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0;
+    }
+}
+
+/* Mobile specific card adjustments */
+@media (max-width: 767px) {
+    .home-container {
+        padding: 12px 0;
+    }
+
+    .welcome-section {
+        margin: 0 16px 20px 16px;
+    }
+
+    .stat-card {
+        margin: 0;
+        border-radius: 20px !important;
+    }
+
+    .quick-actions {
+        margin: 20px 16px;
+    }
+
+    /* Increase touch targets on mobile */
+    .stat-card ion-card-header {
+        padding: 20px 16px;
+    }
+
+    .stat-value {
+        padding: 16px;
+        margin: 8px 16px 16px 16px;
+    }
+}
+
+.stat-card {
+    border-radius: 16px !important;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+}
+
+.card-header-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+}
+
+/* Base card styles with enhanced visibility */
+.stat-card {
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1) !important;
+    backdrop-filter: blur(10px);
+    overflow: visible !important;
+}
+
+/* Streak card styling */
+ion-card[color="warning"],
+.streak-card {
+    --ion-card-background: linear-gradient(135deg, #FF6B6B, #EE5253);
+    background: linear-gradient(135deg, #FF6B6B, #EE5253);
+}
+
+/* Photos card styling */
+ion-card[color="success"],
+.photos-card {
+    --ion-card-background: linear-gradient(135deg, #20BF6B, #0D8C47);
+    background: linear-gradient(135deg, #20BF6B, #0D8C47);
+}
+
+/* Points card styling */
+ion-card[color="primary"],
+.points-card {
+    --ion-card-background: linear-gradient(135deg, #4B7BEC, #3867D6);
+    background: linear-gradient(135deg, #4B7BEC, #3867D6);
+}
+
+/* Common card header styles */
+.stat-card ion-card-header {
+    padding: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-card ion-card-title {
+    color: black !important;
+    font-size: 1.4rem !important;
+    font-weight: 700 !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 4px;
+}
+
+/* Icon styling */
+.stat-card ion-icon {
+    font-size: 24px;
+    color: white;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+/* Stats value container */
+.stat-value {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    padding: 16px;
+    margin: 12px 0;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Number display */
+.stat-value .number {
+    color: white;
+    font-size: 3.2rem !important;
+    font-weight: 800 !important;
+    line-height: 1.2;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: -0.5px;
+}
+
+/* Label styling */
+.stat-value .label {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 4px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Glow effects on hover */
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15) !important;
+}
+
+.streak-card:hover {
+    box-shadow: 0 8px 24px rgba(255, 107, 107, 0.3) !important;
+}
+
+.photos-card:hover {
+    box-shadow: 0 8px 24px rgba(32, 191, 107, 0.3) !important;
+}
+
+.points-card:hover {
+    box-shadow: 0 8px 24px rgba(75, 123, 236, 0.3) !important;
+}
+
+/* Mobile optimizations */
+@media (max-width: 767px) {
+    .stat-value .number {
+        font-size: 2.8rem !important;
+        text-align: center;
+        display: block;
+    }
+    
+    .stat-value .label {
+        font-size: 1rem;
+        text-align: center;
+        display: block;
+    }
+    
+    .stat-card ion-card-title {
+        font-size: 1.2rem !important;
+        text-align: center;
+    }
+
+    .card-header-content {
+        justify-content: center;
+        padding: 12px;
+    }
+
+    /* Add subtle separation between cards */
+    .stat-card {
+        border-radius: 20px !important;
+        margin-bottom: 4px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+    }
+
+    /* Improve touch targets */
+    .stat-value {
+        border-radius: 16px;
+        min-height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Center icons */
+    .stat-card ion-icon {
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+/* Dark mode enhancements */
+@media (prefers-color-scheme: dark) {
+    .stat-card {
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2) !important;
+    }
+    
+    .stat-value {
+        background: rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* High contrast mode */
+@media (forced-colors: active) {
+    .stat-card {
+        border: 2px solid CanvasText !important;
+    }
+    
+    .stat-value {
+        border: 1px solid CanvasText !important;
+    }
+}
+
+.toolbar1 {
+    --background: linear-gradient(135deg, #1dd1ad, #10ac84);
+}
+
+.stat-value {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.stat-value .number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.stat-value .label {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-transform: uppercase;
+}
+
+.quick-actions {
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.quick-actions h3 {
+    color: #000000;
+    font-size: 18px;
+    margin: 0 0 16px 0;
+    font-weight: 600;
+}
+
+.action-button {
+    --background: linear-gradient(135deg, #1dd1ad, #10ac84);
+    --background-hover: linear-gradient(135deg, #1dd1ad, #10ac84);
+    --background-activated: linear-gradient(135deg, #10ac84, #1dd1ad);
+    margin: 8px 0;
+    height: 48px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Accessibility Improvements */
+@media (prefers-reduced-motion: reduce) {
+    .stat-card,
+    .action-button {
+        transition: none !important;
+    }
+}
+
+/* Focus States */
+*:focus {
+    outline: 3px solid #3171e0 !important;
+    outline-offset: 2px !important;
+}
+
+.stat-value:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(49, 113, 224, 0.5);
+    border-radius: 8px;
+}
+
+/* High Contrast Mode */
+@media (forced-colors: active) {
+    .stat-card {
+        border: 2px solid CanvasText;
+    }
+    
+    .welcome-section,
+    .quick-actions {
+        border: 1px solid CanvasText;
+    }
+}
